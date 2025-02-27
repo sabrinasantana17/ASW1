@@ -11,10 +11,30 @@
 
     <style>
         body {
-            background-color: #eff3f7; /* Fundo claro para a página */
+            background-color: #f8f9fa; /* Fundo mais claro para a página */
             font-family: 'Arial', sans-serif;
         }
 
+        /* Header */
+        header {
+            background-color: #659bd4;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            border-radius: 0 0 20px 20px;
+        }
+
+        header h1 {
+            font-size: 32px;
+            margin-bottom: 0;
+        }
+
+        header p {
+            font-size: 16px;
+            margin-top: 5px;
+        }
+
+        /* Cartão de conteúdo */
         .card {
             border-radius: 15px;
             box-shadow: 0 4px 20px rgba(238, 237, 237, 0.1); /* Sombra suave ao redor do cartão */
@@ -118,6 +138,7 @@
 
         .container {
             max-width: 700px;
+            margin-top: 40px;
         }
 
         .text-center {
@@ -131,11 +152,56 @@
         .mt-3 {
             margin-top: 25px;
         }
+
+        .navbar {
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .navbar-nav .nav-item .nav-link {
+            color: #495057;
+            font-size: 16px;
+        }
+
+        .navbar-nav .nav-item .nav-link:hover {
+            color: #659bd4;
+        }
+
     </style>
 </head>
 
 <body class="bg-light">
 
+    <!-- Header -->
+    <header>
+        <h1>Sistema Interativo de Criação de Animais</h1>
+        <p>Crie seu animal interativo com o poder da programação orientada a objetos!</p>
+    </header>
+
+    <!-- Barra de navegação -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">POO Animais</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Container principal -->
     <div class="container mt-5">
         <div class="card shadow">
             <div class="card-body">
@@ -239,23 +305,23 @@
         }
         class Cachorro extends Animal {
             fazerSom() { const audio = new Audio ('./audios/cachorro.mp3')
-                audio.play()}
+                audio.play() }
             mover() { return `O cachorro ${this.nome} está correndo!`; }
         }
         class Gato extends Animal {
             fazerSom() { const audio = new Audio ('./audios/gato.mp3')
-                audio.play()}
+                audio.play() }
             mover() { return `O gato ${this.nome} está saltando!`; }
         }
         class Galo extends Animal {
             fazerSom() {  const audio = new Audio ('./audios/galo.mp3')
-                audio.play()}
+                audio.play() }
             mover() { return `O galo ${this.nome} está voando!`; }
         }
         class Peixe extends Animal {
             fazerSom() { return `O peixe ${this.nome} não faz som.`; }
             mover() {  const audio = new Audio ('./audios/peixe.mp3')
-                audio.play()}
+                audio.play() }
         }
         class Cavalo extends Animal {
             fazerSom() {  const audio = new Audio ('./audios/cavalo.mp3')
