@@ -17,7 +17,7 @@
 
         .card {
             border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(238, 237, 237, 0.1); /* Sombra suave ao redor do cartão */
+            box-shadow: 0 4px 20px rgba(238, 237, 237, 0.1); /* Sombra suave ao redor do cartão */
         }
 
         .card-body {
@@ -238,27 +238,27 @@
             mover() { return "Este animal se move."; }
         }
         class Cachorro extends Animal {
-            fazerSom() { const audio = new Audio ('./audio/cachorro.mp3')
+            fazerSom() { const audio = new Audio ('./audios/cachorro.mp3')
                 audio.play()}
             mover() { return `O cachorro ${this.nome} está correndo!`; }
         }
         class Gato extends Animal {
-            fazerSom() { const audio = new Audio ('./audio/gato.mp3')
+            fazerSom() { const audio = new Audio ('./audios/gato.mp3')
                 audio.play()}
             mover() { return `O gato ${this.nome} está saltando!`; }
         }
         class Galo extends Animal {
-            fazerSom() {  const audio = new Audio ('./audio/galo.mp3')
+            fazerSom() {  const audio = new Audio ('./audios/galo.mp3')
                 audio.play()}
             mover() { return `O galo ${this.nome} está voando!`; }
         }
         class Peixe extends Animal {
             fazerSom() { return `O peixe ${this.nome} não faz som.`; }
-            mover() {  const audio = new Audio ('./audio/peixe.mp3')
+            mover() {  const audio = new Audio ('./audios/peixe.mp3')
                 audio.play()}
         }
         class Cavalo extends Animal {
-            fazerSom() {  const audio = new Audio ('./audio/cavalo.mp3')
+            fazerSom() {  const audio = new Audio ('./audios/cavalo.mp3')
                 audio.play() }
             mover() { return `O cavalo ${this.nome} está galopando!`; }
         }
